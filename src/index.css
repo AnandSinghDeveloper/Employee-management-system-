@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
-  background-color: #111;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
   color: #fff;
+}
+
+body{
+  background-color: black;
+}
+
+#tasklist::-webkit-scrollbar {
+  display: none;
 }

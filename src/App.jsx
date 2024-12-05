@@ -1,11 +1,15 @@
 
 import './App.css';
-import Login from './components/AUTH/Login';
+import AdminDashbord from './components/Dashbord/AdminDashbord';
+// import Login from './components/AUTH/Login';
+// import EmployeeDashbord from './components/Dashbord/employeeDashbord';
 
 const App = () => {
   return (
     <div>
-      <Login />
+      <AdminDashbord/>
+      {/* <EmployeeDashbord/> */}
+      {/* <Login /> */}
     </div>
   );
 };
