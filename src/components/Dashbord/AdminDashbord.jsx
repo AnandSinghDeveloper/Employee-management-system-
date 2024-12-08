@@ -4,7 +4,7 @@ import AllTask from "../Tasklist/AllTask"
 
 function AdminDashbord() {
   return (
-    <div className=" h-screen w-full p-7">
+    <div  className=" h-screen w-full p-7">
      <Header  />
      <CreateTask/>
      <AllTask/>
