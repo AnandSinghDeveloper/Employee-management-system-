@@ -4,7 +4,7 @@ import { AuthContextProvider } from "../../context/Authcontext"
 
 const AllTask = () => {
      const authData= useContext(AuthContextProvider)
-     console.log(authData.EmployeesData);
+    //  console.log(authData.EmployeesData);
      
            
   return (
@@ -20,8 +20,8 @@ const AllTask = () => {
 
        <div id="tasklist" className=" overflow-auto h-48  ">
        {
-        authData.EmployeesData.map((elm)=>{
-          return  <div className=" border-2 border-emerald-500 mb-2 py-2 flex justify-between rounded px-4">
+        authData.EmployeesData.map((elm ,idx)=>{
+          return  <div key={idx} className=" border-2 border-emerald-500 mb-2 py-2 flex justify-between rounded px-4">
           <h2 className= "w-1/5 text-lg font-medium " >{elm.firstName}</h2>
           <h3 className="w-1/5 text-lg font-medium  text-blue-500">{elm.newTasks}</h3>
           <h5 className="w-1/5 text-lg font-medium  text-yellow-400">{elm.activeTasks}</h5>

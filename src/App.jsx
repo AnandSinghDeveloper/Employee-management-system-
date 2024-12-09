@@ -74,7 +74,7 @@ const App = () => {
       !user ? <Login handleLogin={handleLogin}/>: ""
      }
      {
-      user == "Admin"? <AdminDashbord/> : user== "Employee"? <EmployeeDashbord UserData={LogedinUserData} />:""
+      user == "Admin"? <AdminDashbord changeUser={setUser}/> : user== "Employee"? <EmployeeDashbord changeUser={setUser} UserData={LogedinUserData} />:""
      }
     
     </div>

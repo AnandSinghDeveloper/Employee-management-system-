@@ -4,11 +4,11 @@ import { AuthContextProvider } from "../../context/Authcontext";
 
 
 
-const Header = ({UserData}) => {
+const Header = (props) => {
 
-   const [username,setUsername]=useState(null);
+//    const [username,setUsername]=useState(null);
 
- console.log(UserData);
+//  console.log(UserData);
  
 
   // useEffect(()=>{
@@ -23,7 +23,9 @@ const Header = ({UserData}) => {
   
 let LogOUTUser= ()=>{
    localStorage.setItem('loggedinUser',"");
-   window.location.reload();
+  //  window.location.reload();
+  props.changeUser("");
+
 }
   
   
