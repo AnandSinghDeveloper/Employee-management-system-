@@ -15,16 +15,24 @@ const App = () => {
      const [LogedinUserData,setLogedinUserData ]=useState(null);
      const authData = useContext(AuthContextProvider);
 
+    //  console.log(authData);
+     
+
      useEffect(()=>{
 
       const loggedinUser = localStorage.getItem("loggedinUser") ;
       if(loggedinUser){
          const Userdata= JSON.parse(loggedinUser);
+        //  console.log(Userdata);
+         
          setUser(Userdata.role);
 
 
          
          setLogedinUserData(Userdata.data)
+
+      
+        
          
       }
 
@@ -62,9 +70,9 @@ const App = () => {
     // handleLogin();
 
   //  useEffect(()=>{
-  //   //  SetLoaclStorage()
-  //   GetLoaclStorage();
-  //  },);
+  //    SetLoaclStorage()
+  //   // GetLoaclStorage();
+  //  },[]);
 
   
 

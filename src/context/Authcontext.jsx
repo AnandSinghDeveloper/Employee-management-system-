@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react"
-import { GetLoaclStorage, SetLoaclStorage } from "../utils/localstorage";
+import { GetLoaclStorage, SetLoaclStorage } from "../utils/Localstorage";
 
  export const AuthContextProvider = createContext()
 

@@ -10,6 +10,22 @@ const CreateTask = () => {
    
    const [newTask,setNewTask]=useState({});
 
+  //  useEffect(() => {
+  //   const existingData = localStorage.getItem("Employees");
+  //   if (!existingData) {
+  //     const dummyEmployees = [
+  //       { firstName: "John", tasks: [] },
+  //       { firstName: "Jane", tasks: [] },
+  //     ];
+  //     localStorage.setItem("Employees", JSON.stringify(dummyEmployees));
+  //     console.log("Initialized Employees data in localStorage.");
+  //   } else {
+  //     console.log("Employees data already exists in localStorage.");
+  //   }
+  // }, []);
+   
+   
+    
 
    const  SubmitHandler= (e) => {
     e.preventDefault();
@@ -21,7 +37,7 @@ const CreateTask = () => {
     }
   
     // Create a new task
-    const newTask = {
+    setNewTask( {
       title,
       date,
       category,
@@ -30,7 +46,7 @@ const CreateTask = () => {
       newTask: true,
       complete: false,
       failed: false,
-    };
+    });
   
     // Retrieve employees from localStorage
     const employeesData = localStorage.getItem("Employees");
@@ -59,6 +75,8 @@ const CreateTask = () => {
         }
         employee.tasks.push(newTask);
         taskAssigned = true;
+        // console.log(newTask);
+        
       }
       return employee;
     });
